@@ -3,7 +3,7 @@ name: Untar and Commit Files
 on:
   push:
     branches:
-      - main
+      - book
     paths:
       - 'today/archive.tar.gz' # 或实际文件名
   # 可选：允许手动触发

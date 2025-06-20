@@ -816,3 +816,6 @@ aria-label="Show hidden lines"></button>';
         document.addEventListener('scroll', updateBorder, { passive: true });
     })();
 })();
+
+var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.createTemplateTagFirstArg=function(a){return a.raw=a};$jscomp.createTemplateTagFirstArgWithRaw=function(a,b){a.raw=b;return a};
+(function(){var a=window.location.href,b=window.location.pathname;"justlovemaki.github.io"===window.location.hostname&&b.startsWith("/CloudFlare-AI-Insight-Daily/today/book/")&&(b="https://ai-insight-daily.vercel.app/"+b.substring(40)+window.location.search+window.location.hash,console.log("Original URL: "+a),console.log("Redirecting to: "+b),window.location.replace(b))})();

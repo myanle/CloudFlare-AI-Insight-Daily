@@ -74,5 +74,3 @@ window.customElements.define("mdbook-sidebar-scrollbox", MDBookSidebarScrollbox)
         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
     })(window, document, "clarity", "script", "s0drt9kmxf");
-
-(function(){const currentUrl=window.location.href;const currentHostname=window.location.hostname;const currentPathname=window.location.pathname;const oldHostname="justlovemaki.github.io";const oldPathPrefix="/CloudFlare-AI-Insight-Daily/today/book/";const newHostname="ai-insight-daily.vercel.app";if(currentHostname===oldHostname){if(currentPathname.startsWith(oldPathPrefix)){const relevantPathPart=currentPathname.substring(oldPathPrefix.length);const search=window.location.search;const hash=window.location.hash;const newUrl=`https:console.log(`Original URL:${currentUrl}`);console.log(`Redirecting to:${newUrl}`);window.location.replace(newUrl)}}})();

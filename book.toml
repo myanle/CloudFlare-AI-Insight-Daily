@@ -2,7 +2,7 @@
 authors = []
 language = "zh"
 src = "src"
-title = "By 何夕2077"
+title = "AI 日报 By 何夕2077"
 create-missing = true  
 
 [output.html]

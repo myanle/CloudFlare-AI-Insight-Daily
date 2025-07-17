@@ -5,9 +5,18 @@
     <link>https://yuansiwang.netlify.app</link>
     <description> 近 7 天的AI日报</description>
     <language>zh-cn</language>
-    <lastBuildDate>Thu, 17 Jul 2025 11:40:02 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 17 Jul 2025 22:44:30 GMT</lastBuildDate>
     <atom:link href="https://ai-daily.myanke2015.workers.dev/rss" rel="self" type="application/rss+xml" />
     
+        <item>
+          <title><![CDATA[2025-07-18日刊]]></title>
+          <link>https://yuansiwang.netlify.app/2025-07/2025-07-18/</link>
+          <guid>https://yuansiwang.netlify.app/2025-07/2025-07-18/</guid>
+          <pubDate>Fri, 18 Jul 2025 09:15:09 GMT</pubDate>
+          <content:encoded><![CDATA[<p><a href="https://images.weserv.nl/?url=">https://images.weserv.nl/?url=</a></p>]]></content:encoded>
+          <description><![CDATA[https://images.weserv.nl/?url=]]></description>
+        </item>
+      
         <item>
           <title><![CDATA[2025-07-17日刊]]></title>
           <link>https://yuansiwang.netlify.app/2025-07/2025-07-17/</link>

@@ -817,11 +817,6 @@ aria-label="Show hidden lines"></button>';
     })();
 })();
 
-var $jscomp=$jscomp||{};$jscomp.scope={};$jscomp.createTemplateTagFirstArg=function(a){return a.raw=a};$jscomp.createTemplateTagFirstArgWithRaw=function(a,b){a.raw=b;return a};
-(function(){var a=window.location.href,b=window.location.pathname;"justlovemaki.github.io"===window.location.hostname&&b.startsWith("/CloudFlare-AI-Insight-Daily/today/book/")&&(b="https://ai.hubtoday.app/"+b.substring(40)+window.location.search+window.location.hash,console.log("Original URL: "+a),console.log("Redirecting to: "+b),window.location.replace(b))})();
 
-    (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-    })(window, document, "clarity", "script", "s0drt9kmxf");
+
+

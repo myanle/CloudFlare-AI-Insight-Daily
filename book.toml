@@ -7,4 +7,4 @@ description = "为您精选 AI 领域的最新动态，包括行业新闻、热�
 create-missing = true  
 
 [output.html]
-git-repository-url = "https://github.com/justlovemaki/CloudFlare-AI-Insight-Daily" # 替换成你的仓库地址
+git-repository-url = "https://github.com/myanle/CloudFlare-AI-Insight-Daily" # 替换成你的仓库地址

@@ -174,80 +174,81 @@
 <p><code>猿思 日报</code></p>
 </blockquote>
 <h3 id="ai内容摘要"><a class="header" href="#ai内容摘要"><strong>AI内容摘要</strong></a></h3>
-<pre><code>Meta组建3400人AI团队，目标涵盖AGI基础研究、AI产品及Llama 5研发等。理想汽车获国内首个车载AI安全认证，其车载大模型通过双国标认证。ChatGPT macOS应用推出录音模式，可转录长达120分钟录音并提取关键信息。
-户外SLAM技术取得突破，S3PO-GS框架刷新多项记录，解决尺度漂移难题。AI创意引擎Creati年收入破千万美元，成功连接网红和商家，快速生成个性化广告视频。
-苹果发布2025基础模型技术报告，OpenAI推出ChatGPT Agent，可主动选择工具完成任务。
+<pre><code>苹果发布2025基础模型技术报告，推出两种多语言多模态基础语言模型，并强调AI模型的责任感和用户隐私。  PresentAgent可将长篇文档转化为带解说的演示视频，其生成视频质量接近人类水平。Chemía框架采用"配置即代码”理念，简化了化学AI模型训练流程，提升科研效率。
 </code></pre>
 <h3 id="今日ai资讯"><a class="header" href="#今日ai资讯"><strong>今日AI资讯</strong></a></h3>
 <ol>
 <li>
-<p>🎉<strong>Meta 3400人AI超级战队组建完成！</strong> Meta公司组建了一个拥有3400多名员工的超级<strong>人工智能</strong>团队，由前Scale AI的CEO亚历山大·王领导。该团队的目标是"人够少但GPU够多”，下设四个小组：<strong>AGI基础研究</strong>、<strong>AI产品（类似ChatGPT的Meta AI助手）</strong>、<strong>基础AI实验室（图灵奖得主Yann LeCun领导）<strong>和</strong>Llama 5研发</strong>。Meta还积极从其他公司挖角，但此举也引发了一些内部员工的质疑。<img src="https://images.weserv.nl/?url=https://pic.chinaz.com/picmap/202304251756311752_2.jpg" alt="AI 机器人 人工智能 (3)数据分析" /></p>
+<p>🍎 <strong>苹果发布2025基础模型技术报告：AI新篇章开启</strong>  苹果发布了2025年Apple Intelligence基础语言模型技术报告，介绍了苹果训练新一代模型的技术细节，包括数据、架构、训练方案和推理优化，并与同类模型进行了对比评估。报告重点在于提升用户价值，扩展功能并优化质量，同时大幅提升设备端和私有云计算的运行效率。苹果推出了两种多语言、多模态基础语言模型：一种针对苹果自有芯片优化的30亿参数设备模型，和一种结合新型并行轨道混合专家(PT-MoE) Transformer的云端模型。这些模型支持多种语言，能够理解图像并执行工具调用。苹果还推出了新的Swift核心基础模型框架，方便开发者轻松集成引导式生成、约束式工具调用和LoRA适配器微调等功能。苹果强调了其AI模型的责任感，并重视用户隐私安全。[图片: 图片 https://image.jiqizhixin.com/uploads/editor/8365f316-1bd2-4c6f-be8f-db2fb0022cf8/640.png] [图片: 图片 https://image.jiqizhixin.com/uploads/editor/a453043c-bf15-4e5d-86c0-05fabc44d324/640.png] <a href="https://machinelearning.apple.com/research/apple-foundation-models-tech-report-2025">🔗 报告链接</a></p>
 </li>
 <li>
-<p>🚗<strong>理想汽车获国内首个车载AI安全认证！</strong> 理想汽车获得国内首批汽车生成式<strong>人工智能</strong>安全测评证书，其车载大模型通过了GB/T45654和GB45438-2025双国标认证，在<strong>AIGC内容安全和标识</strong>领域处于领先地位。</p>
+<p>🧑‍🔬 <strong>PresentAgent：一键生成演讲视频，AI黑科技加持</strong> AI Geeks、澳洲人工智能研究所等机构联合推出了PresentAgent，这是一个能将长篇文档转化为带解说的演示视频的多模态智能体。它突破了现有方法的局限，能生成高度同步的视觉内容和语音解说，模拟人类风格的演示。PresentAgent采用模块化流程：文档分段、幻灯片渲染、语音解说生成和音视频对齐。为了评估生成视频，研究人员提出了PresentEval框架，从内容忠实度、视觉清晰度和观众理解度三个维度进行评分。实验结果表明，PresentAgent在所有评估指标上接近人类水平。其主要贡献包括：提出"文档到演示视频生成”这一新任务，设计PresentAgent系统，提出PresentEval评估框架，并构建了高质量评测数据集。[图片: 图片 https://image.jiqizhixin.com/uploads/editor/045ea427-7b48-4ea7-8266-6d97e98aad63/640.png] [图片: 图片 https://image.jiqizhixin.com/uploads/editor/b0be6a7f-34e8-4f2e-b596-23bf78d5c84b/640.png] [图片: 图片 https://image.jiqizhixin.com/uploads/editor/7a8bb3a3-1bcd-4a1d-b20a-931cbfe95f89/640.png] <a href="https://github.com/AIGeeksGroup/PresentAgent">🔗 项目仓库</a> <a href="https://arxiv.org/abs/2507.04036">🔗 论文地址</a></p>
 </li>
 <li>
-<p>🎙️<strong>ChatGPT录音模式上线，会议记录神器来袭！</strong> OpenAI的ChatGPT macOS桌面应用推出录音模式（Plus用户），支持长达120分钟的录音，自动生成转录文本、提取关键点，并可生成计划或代码。录音结束后，原始音频会被删除。目前仅支持macOS系统。<img src="https://images.weserv.nl/?url=https://pic.chinaz.com/2025/0718/6388845217455632271325327.png" alt="image" /></p>
+<p>🧪 <strong>Chemia：化学AI模型训练的"配置即代码”时代</strong> 上海人工智能实验室开源了Chemia，一个专为化学性质和反应预测优化的AI模型训练框架。Chemia采用"配置即代码”理念，将数据准备、特征工程、模型训练、超参数优化等流程都整合在一个YAML配置文件中，用户只需一行代码即可完成化学大模型训练。Chemia内置多种经典AI算法、自动化的特征工程和智能优化引擎，以及灵活的工作流，可以轻松实现快速训练、k-折交叉验证等。它就像一个"菜谱”，让化学家们能够更轻松地进行AI模型训练，提升科研效率和可重复性。只需三步，准备数据、编写配置文件、启动程序，就能快速上手。Chemia的出现，标志着化学AI模型训练进入了"配置即代码”的新时代。[图片: 图片 https://image.jiqizhixin.com/uploads/editor/6a81abcf-d6e4-4055-805b-35b620e88fd5/640.png] [图片: 图片 https://github.com/flyben97/Chemia/blob/main/docs/source/images/chemiachem.png] <a href="https://github.com/flyben97/Chemia">🔗 Github</a></p>
 </li>
 <li>
-<p>🏞️🚀<strong>户外SLAM技术取得重大突破！</strong> 香港科技大学团队在户外<strong>SLAM</strong>(即时定位与地图构建)领域取得突破，其创新框架<strong>S3PO-GS</strong>解决了<strong>尺度漂移</strong>难题，并在Waymo、KITTI和DL3DV三大户外基准测试中刷新了多项记录。该框架的核心在于<strong>自洽跟踪模块</strong>、<strong>动态建图机制</strong>和<strong>联合优化架构</strong>。<a href="https://github.com/3DAgentWorld/S3PO-GS">🔗 项目仓库</a></p>
+<p>🎉 <strong>中国团队研发AI药物发现平台LeadDisFlow，助推候选药物进入临床II期！</strong> 传统的药物研发面临三大难题：化合物库质量差、实验成本高、预测模型解释性差。为此，一个中国科研团队开发了<strong>LeadDisFlow</strong>，一个基于<strong>分子图像</strong>的AI平台，它能快速、精准且可解释地发现药物。LeadDisFlow已成功帮助发现四种高活性EP4拮抗剂，并推动一款候选药物进入临床II期试验！该平台的两大优势在于：<strong>优越的可解释性</strong>，能直观显示影响分子活性的关键结构；以及<strong>完整的端到端验证</strong>，覆盖从AI设计到实验验证的全流程。 <a href="https://www.sciengine.com/NSO/doi/10.1360/nso/20240015">🔗 项目地址</a></p>
 </li>
 <li>
-<p>💰✨<strong>AI创意引擎Creati年收入破千万美元！</strong> Creati是一款专注于广告创意的AI引擎，一年内用户规模突破千万，年收入超过千万美元。它通过AI模型将网红的爆款视频转化为可定制的模板，帮助商家快速生成个性化广告视频。Creati的成功在于深刻理解营销，并成功搭建了连接网红与商家的平台。</p>
+<p>🚀 <strong>ACL 2025论文分享会：把握AI前沿，别掉队！</strong> 7月19日，机器之心举办ACL 2025论文分享会，邀请<strong>车万翔</strong>教授和<strong>刘鹏飞</strong>副教授等大咖分享<strong>ACL 2025趋势</strong>和<strong>大模型强化学习与复杂推理</strong>等前沿技术。还有关于<strong>上下文工程</strong>的圆桌讨论！<a href="https://image.jiqizhixin.com/uploads/editor/3dacefb5-e7f0-4920-9a9b-ff12e3793800/640.png">图片: 图片</a> <a href="%E8%AF%B7%E6%B7%BB%E5%8A%A0%E6%8A%A5%E5%90%8D%E9%93%BE%E6%8E%A5">🔗 报名链接</a></p>
 </li>
 <li>
-<p>🏢🤔<strong>Meta效仿字节？全新AI组织架构曝光！</strong> Meta公司组建了一个由3400多人组成的AI团队，由前Scale AI CEO <strong>Alexandr Wang</strong> 领导。新架构包含四个主要部门：AGI基础研究团队、AI产品团队、基础AI实验室（由Yann LeCun领导）以及Llama 5研发团队。Meta的这一举动反映了对<strong>AGI</strong> (通用人工智能)和<strong>大型语言模型</strong>的重视。</p>
+<p>🖼️ <strong>Oasis：只需一张图片，就能生成高质量多模态指令数据！</strong> 同济大学、字节跳动和爱丁堡大学的研究者们开发了<strong>Oasis</strong>，一个只需提供图片就能自动生成高质量多模态指令数据的方法。Oasis克服了现有方法多样性不足、质量不高、依赖人工等问题，并开源了代码库<strong>MM-INF</strong>。Oasis生成的指令数据长度更长、语言更丰富、任务更多元，显著提升了多模态大语言模型的性能。 <a href="https://github.com/Letian2003/MM_INF">🔗 代码链接</a></p>
 </li>
 <li>
-<p>🎬🤖✍️📹🛍️🎶🔄<strong>Xiaohu.AI日报摘要 (7.15-7.17):  九大AI工具更新！</strong> 本期日报聚焦九大AI工具更新：Vidu的开放式<strong>视频生成</strong>工具、Moonshot AI的Kimi K2模型、Runway的Act-Two动作捕捉模型、ChatGPT的录音转写功能、LTX Studio的LTX-Video 13B视频生成模型、OpenAI的ChatGPT Agent功能、Suno v4.5+音乐创作工具、MirageLSD实时AI视频风格转换工具。</p>
+<p>🤖💬 <strong>超酷开源语音模型来袭！</strong> 一个名为 <strong>Voxtral</strong> 的<strong>开源语音理解模型</strong> 横空出世，分数超过 150。<a href="https://readhacker.news/s/6xNV6">🔗 项目链接</a> [<img src="https://cdn4.cdn-telegram.org/file/Eobt7Yeha-wpdD4AFNrq3DHoI4AGUSqbootK-1T8-sgzUCGFVo0ZqsrNhx6Z1sRKQ4VSHNdmPClZPMJMmlVrcCjtpuf126HKpqXEt2J0RAdeGka7vUt4VlR6MWx0j4dEJ9OmgB-rkFZS_lsvU0WFCjvqvT6s1N9Rq17IHWZOvseX0_eG6jkIySuavwilL__7sABLu4Z7BIG6xgmtiNq4UKnMGLlxxhTdP2ONe3KtfsC55vNCiAwqKcGkxSNbn6Ivvtj_AhetuVEC7FnG88DqwLdjyw3IsWtSSxrfYN7QD8KEqEl0KJIORFrd0rIyhxouuNBV0cyzCtkBJuuMLv1L1g.jpg" alt="Voxtral模型介绍" />]</p>
 </li>
 <li>
-<p>💰<strong>谷歌Veo3：AI视频生成新贵，价格却让人咋舌！</strong> 谷歌的<strong>Veo3</strong>视频生成模型通过<strong>Gemini API</strong>开放给开发者，能根据文字提示生成高清视频，但收费标准为每秒0.75美元，成本很高。<img src="https://images.weserv.nl/?url=https://pic.chinaz.com/2025/0718/6388842560601069296867616.png" alt="QQ20250718-085316" /></p>
+<p>🤔😂 <strong>预测财富与颜值？</strong>  有人想让 AI 预测其粉丝中谁会发财，谁最帅。<a href="https://x.com/ezshine/status/1946422330143703374">🔗 推特链接</a></p>
 </li>
 <li>
-<p>💼🤔<strong>Veo3未来展望：技术进步与成本控制的博弈</strong> Veo3的出现代表着AI视频生成技术的一大进步，但高昂的成本限制了其普及。未来，技术进步能否降低成本，将是一个值得关注的问题。<a href="https://github.com/microsoft/markitdown">🔗 Markitdown</a> <a href="https://github.com/langchain-ai/open_deep_research">🔗 Open Deep Research</a></p>
+<p>✨🤩 <strong>AI换脸玩转经典电影！</strong>  有人用 <strong>Vidu AI</strong> 将自己"穿越”到经典电影中。[<img src="https://external-preview.redd.it/3EMB5Wvsq1eksjpY677pGvh1C9DndLbwnj3L1eNLAZw.jpeg?width=320&amp;crop=smart&amp;auto=webp&amp;s=bbe65aa6d70e4885de58b7d98d1ab16d5bb8ba08" alt="AI换脸" />] <a href="https://www.reddit.com/r/artificial/comments/1m3mdgn/i_used_vidu_ai_to_put_myself_in_public_domain/">🔗Reddit链接</a></p>
 </li>
 <li>
-<p>✨<strong>Segment Anything (SAM):  图像分割神器</strong> Facebook Research 推出的 SAM 模型可以轻松地从图像中分割出任何你想要的物体。<a href="https://github.com/facebookresearch/segment-anything">🔗 项目仓库</a></p>
+<p>🤔<strong>风波不断的Windsurf：</strong> Windsurf公司新任CEO Jeff Wang披露了公司被Cognition收购的内幕，并暗指前任CEO管理不善，临阵脱逃。[图片: https://pbs.twimg.com/media/GwML6_0XoAAO0A7?format=jpg&amp;name=orig] [图片: https://pbs.twimg.com/media/GwMMQ4UXcAA6YBr?format=jpg&amp;name=orig]</p>
 </li>
 <li>
-<p>🚀<strong>Hyprland:  Wayland 桌面环境新星</strong> Hyprland是一个高度可定制、动态平铺且颜值在线的 Wayland 桌面环境。<a href="https://github.com/hyprwm/Hyprland">🔗 项目仓库</a></p>
+<p>💳<strong>Valve与成人游戏：</strong> Valve公司确认信用卡公司施压，导致Steam下架部分成人游戏。[图片: https://cdn4.cdn-telegram.org/file/LfN0aujhJqfFDNmCX2pmc74j7b4AHSbqPPtXOXYzuOYLL3ZHgSo37ACnbp8Os5r5YmYGWbzCfMOY7Intz5Lm0hN8ri_t5DWQrTwZhnETbLkoJ9i5yxgmSX6lBNxuhPo8bCbmNVFPhHCojztHC2UQ563KZs4jxQdglX3jFBN0PPMe8nKBx0QRJs-3mQJT5s9VTRILwzib8gFby6tl2YyNYuiO7T0DPGKRvks4PyvCHQ6Wt7DjcIpMKs0SeJgjT-nKLgDt1x48IR0q0R_iAx6VOztxJoFrB4tP0cJy8ZYpOhqECAAABxVl9PtneMZIWAAp_lUj4zhgmRVnhL9bqk4H9g.jpg]</p>
 </li>
 <li>
-<p>🔑<strong>Gitleaks:  代码安全卫士</strong> Gitleaks 可以自动查找并标记出隐藏在代码中的密钥、密码等敏感信息。<a href="https://github.com/gitleaks/gitleaks">🔗 项目仓库</a></p>
+<p>🤖<strong>AI上下文工程的教训：</strong> Manus公司分享了在AI <strong>上下文工程</strong>方面的经验，并表示这花费了数千万美元的代价。[图片: https://files.manuscdn.com/assets/dashboard/materials/2025/07/18/eaafe9e6a174b29458c314ccc225dbdd39a7c9d66e60786235165d9aba23f578.webp]</p>
 </li>
 <li>
-<p>🍎🤖<strong>苹果发布2025基础模型技术报告及OpenAI通用智能体ChatGPT Agent横空出世！</strong> 苹果发布了2025年基础语言模型技术报告，介绍了两种<strong>多语言、多模态</strong>基础语言模型；OpenAI发布了全新的ChatGPT Agent，它可以主动选择工具，完成任务。<a href="https://image.jiqizhixin.com/uploads/editor/8365f316-1bd2-4c6f-be8f-db2fb0022cf8/640.png">图片</a> <a href="https://machinelearning.apple.com/research/apple-foundation-models-tech-report-2025">🔗 报告链接</a> <a href="https://image.jiqizhixin.com/uploads/editor/f29a1fbe-3dff-4897-98ba-84ebfb73f6c1/640.gif">图片</a> <a href="https://openai.com/index/introducing-chatgpt-agent/">🔗 OpenAI介绍</a></p>
+<p>🤔 <strong>基因疗法风险与癌症早期筛查的希望</strong> 最近的研究表明，<strong>基因疗法</strong>存在潜在的严重风险，例如参与<strong>SRP-9004</strong> I期临床试验的患者死于<strong>急性肝衰竭</strong>。另一方面，一项研究发现，在癌症诊断前的数年，<strong>癌症DNA</strong>就可在血液中被检测到，这意味着未来<strong>癌症筛查</strong>有望实现早期诊断。英国首相苏纳克表示，在<strong>人工智能</strong>领域，并非只有美国和中国才能胜出。 [<img src="https://external-preview.redd.it/yyTO0bP_qCXZPLtA01ytZcfFXu87JWtXTvHrK0qlnrA.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=ded37ad490fe2447f4a0939f396114ccf94f5180" alt="AI竞争" />]</p>
 </li>
 <li>
-<p>🌟<strong>开源工具DocsGPT</strong> DocsGPT旨在帮助用户从知识来源获得可靠的答案，避免幻觉，支持私有信息检索。 <a href="https://github.com/arc53/DocsGPT">🔗 DocsGPT项目</a></p>
+<p>🤔🤖 <strong>白宫与PragerU合作开发AI项目，引发争议</strong> 白宫与PragerU合作，用AI技术"改造”建国先贤，这其中潜在的<strong>偏见和误导</strong>风险令人担忧。<a href="https://external-preview.redd.it/bTV6eMvKLaPlZhjJZuSp6PdWZbQUtvx_L3DGTrFC-ok.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=9e5ac02ff917ccc5ef54008e5339be361178fb64">图片: White House Partners With PragerU to Make AI-Slopified Founding Fathers</a>]</p>
 </li>
 <li>
-<p>🤔<strong>VisionThink：更高效的视觉语言模型</strong> VisionThink根据任务难度动态调整图像分辨率，比那些使用固定压缩比例的方法要灵活高效得多。<a href="https://github.com/dvlab-research/VisionThink">🔗 项目仓库</a></p>
+<p>🤯🤖 <strong>AI客服取代人工，是进步还是陷阱？</strong> 一家公司推出了基于<strong>大型语言模型 (LLM)</strong> 的AI客服，声称可以取代整个客服团队，但并未透露AI模型的安全性、防护措施和避免"胡说八道”的机制。<a href="https://external-preview.redd.it/NnprYjVlZmczbmRmMZf1UE_Dnoy_syJXOIAzJm0D9SqdihGL4vhuloaqZF5Y.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=eb13e00a185d168eee48db8fa026c0ed231aacfe">图片: Cluely’s new AI agent now replaces your entire support team. No joke.</a>]</p>
 </li>
 <li>
-<p>🤖<strong>模仿游戏：让大型语言模型学会像图灵机一样思考</strong> TAIL方法让LLM模仿图灵机的运行过程，提升了LLM在各种任务上的长度泛化能力。</p>
+<p>🤔🤖 <strong>是时候重新思考我们与AI的关系了！</strong> Reddit上的一篇帖子呼吁大家重新思考与<strong>人工智能</strong>的关系，反映出人们对AI技术快速发展带来的伦理和社会影响的担忧。<a href="https://external-preview.redd.it/5wVr-JMbrwUA4H42PH5AqHNtHMjPpbpVGqlFxa6ETIc.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=b65cba1962bdae63bcbe70666f26fa33a861215c">图片: It's Time to Rethink our Relationship With Artificial Intelligence</a>]</p>
 </li>
 <li>
-<p>🛡️<strong>自动驾驶安全多模态大型语言模型：给AI系上安全带</strong> AutoSteer在不重新训练模型的情况下，就能提升MLLMs的安全性。</p>
+<p>总而言之，这三条Reddit帖子都反映了人们对<strong>人工智能快速发展</strong>的担忧。</p>
 </li>
 <li>
-<p>🚀<strong>亚马逊云科技发布Agentic AI全家桶，AI Agent落地加速！</strong> 亚马逊云科技发布了全套的Agent AI解决方案，包含四大支柱：<strong>模型应用能力、安全性和可靠性、可扩展性以及部署和生产能力</strong>，以及全新的Agent开发架构 <strong>Amazon Bedrock AgentCore</strong>。</p>
+<p>🤔 <strong>互联网：精灵的国度？AI的降临！</strong> Reddit上热议人工智能与互联网的关系，有人将其比作一个充满魔法的精灵国度，AI的到来将如何改变这个"国度”？ [<img src="https://external-preview.redd.it/7usidHPRQ62P_Tj5-zesXj_stMXN2_nIpDwMeKagqwY.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=ad5237f934423b6a75114e1c56503296fc80e15f" alt="The internet as a fae realm" />]</p>
 </li>
 <li>
-<p>👨‍💻<strong>开源AI女友Bella火爆全网，3D建模展现惊艳效果！</strong>  网友Jackywine开源了他的3D AI女友项目——Bella。<a href="https://github.com/Jackywine/Bella">🔗 项目仓库</a></p>
+<p>🎬 <strong>Netflix用AI拍剧集啦！</strong> Netflix首次在剧集中使用了<strong>生成式AI</strong>！ [<img src="https://external-preview.redd.it/Dl3g-guBlAJ_Pd3-kuhziJQEGhqEX-PEXHry8F7xKjE.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=20764c14953c8900e9a1aa189baeca316541ae72" alt="Netflix uses generative AI" />]</p>
 </li>
 <li>
-<p>🔬<strong>ACL 2025论文：Evaluation Agent，你的AI模型评测专家！</strong> Evaluation Agent是一个能够根据你的需求定制评估方案、并生成专业分析报告的AI模型评测工具。<a href="https://arxiv.org/abs/2412.09645">🔗 论文</a> <a href="https://github.com/Vchitect/Evaluation-Agent">🔗 代码</a> <a href="https://vchitect.github.io/Evaluation-Agent-project/">🔗 网页</a></p>
+<p>⚠️ <strong>AI安全问题敲响警钟！</strong> OpenAI和Anthropic的研究人员批评马斯克的xAI公司<strong>AI安全文化</strong>不严谨，认为其发展AI的态度过于"鲁莽”。 [<img src="https://external-preview.redd.it/hVogYuDhjeteGDL8d4zWMIj0Y3kN4kLhRSDkOrYfDGE.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=84d1d6d2c13be099a7ed15e400df760ab24fcade" alt="OpenAI and Anthropic decry &#39;reckless&#39; safety culture" />]</p>
 </li>
 <li>
-<p>🤔<strong>移民数据安全再受关注：</strong> 美国移民与海关执法局(ICE)获得了访问数千万美国人敏感医疗数据的权限，引发了对个人隐私和数据安全的担忧。<a href="https://cdn4.cdn-telegram.org/file/OEWqIYIXOcEOUlIijFMNVc9tWLZP1Wct91NTECkNzMBPKbMQlFDWv5zsyWLa1DK7gXM2SmhR2_4tM271_Jz7PpkHNAubtOmMXmTBCRCY1xuhOhi9BUbGdWbaA6ebfZ-B9iuLeK4NQ5OdJ9dggxFOn6YEs3Ib254V08wF0kufZqJZXV0-NUHQjqAXpaM2txgITlXuKjkwKb21MeT_G29-f0u7yQ4Saoh-RlM4zF-eR1AWrckjxr8hEFWhZDKoJMyD-tysaSCKlLRfmtchJeQXogZG-hyk6MYNwfbauK87NlQVFJU4Flpv2YiELd_FzwWn-NHkPMfc41eBaFPTdn50w.jpg">图片</a></p>
+<p>🤔🤖 <strong>程序员的末日？</strong> 软银创始人孙正义预言：<strong>人类程序员时代即将终结</strong>！ [<img src="https://external-preview.redd.it/hPD8FxQIKHzjsls9JQliNDKzuWAQNEb_zTt0ubPb730.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=5a6011b198c285a72d16cf2f9198ac03cb869b45" alt="图片" />]</p>
 </li>
 <li>
-<p>🚀<strong>黑客马拉松颁奖典礼即将开始：</strong>  bolt.new 邀请大家一起观看黑客马拉松颁奖典礼直播。<a href="https://video.twimg.com/amplify_video/1946268822316490752/vid/avc1/720x900/d0yyM2iBcc3_8Dbm.mp4?tag=14">▶️ 视频演示</a></p>
+<p>🤨🤯 <strong>AGI，是救世主还是灭世者？</strong> 乔·罗根在采访人工智能专家Roman Yampolskiy教授时表示，他对人类能够控制AGI的说法深表怀疑。 [<img src="https://external-preview.redd.it/d3ZtZWFidTU2bGRmMYfPjC_xEte4JgKowLvmgonYI6ZkBVeQpC56WBKPbIpf.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=53319708d589bbfc3dcac29ca3d1a71043fcfc4d" alt="图片" />]</p>
 </li>
 <li>
-<p>🤔<strong>白宫与PragerU合作开发AI项目？</strong> Reddit 上的一则帖子显示白宫与PragerU合作，利用AI技术"美化”建国元勋形象。<a href="https://external-preview.redd.it/bTV6eMvKLaPlZhjJZuSp6PdWZbQUtvx_L3DGTrFC-ok.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=9e5ac02ff917ccc5ef54008e5339be361178fb64">图片</a></p>
+<p>🤷‍♂️ <strong>AGI时代，我们该如何应对？</strong> Reddit上一个简单的图片"Wdym 'when'?”  [<img src="https://preview.redd.it/w0ei0rejbidf1.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=74d18f348e36d56d134c70b158fd78686ad0ac8a" alt="图片" />]</p>
+</li>
+<li>
+<p>🚀✨ <strong>实时视频变形AI来了！</strong> Reddit上一则帖子展示了一项令人惊叹的技术：<strong>实时视频变形AI</strong>！ [<img src="https://external-preview.redd.it/c4ZUYav6qjJHVdDz170iCk1DosHvAo27V0j25amHsSk.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=018f3afbed5b13722afdee432e3925c4a5308cf7" alt="实时视频变形效果" />]</p>
 </li>
 </ol>
 
@@ -255,7 +256,7 @@
 
                     <nav class="nav-wrapper" aria-label="Page navigation">
                         <!-- Mobile navigation buttons -->
-                            <a rel="prev" href="../2025-07-19.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                            <a rel="prev" href="../daily/2025-07-20.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                                 <i class="fa fa-angle-left"></i>
                             </a>
 
@@ -269,7 +270,7 @@
             </div>
 
             <nav class="nav-wide-wrapper" aria-label="Page navigation">
-                    <a rel="prev" href="../2025-07-19.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                    <a rel="prev" href="../daily/2025-07-20.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
                         <i class="fa fa-angle-left"></i>
                     </a>
 

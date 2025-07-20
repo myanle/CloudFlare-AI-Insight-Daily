@@ -5,16 +5,25 @@
     <link>https://yuansiwang.netlify.app</link>
     <description> 近 7 天的AI日报</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sat, 19 Jul 2025 02:02:25 GMT</lastBuildDate>
+    <lastBuildDate>Sun, 20 Jul 2025 01:07:29 GMT</lastBuildDate>
     <atom:link href="https://ai-daily.myanke2015.workers.dev/rss" rel="self" type="application/rss+xml" />
     
+        <item>
+          <title><![CDATA[2025-07-20日刊]]></title>
+          <link>https://yuansiwang.netlify.app/2025-07/2025-07-20/</link>
+          <guid>https://yuansiwang.netlify.app/2025-07/2025-07-20/</guid>
+          <pubDate>Sun, 20 Jul 2025 09:40:15 GMT</pubDate>
+          <content:encoded><![CDATA[<p><a href="https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/">https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/</a></p>]]></content:encoded>
+          <description><![CDATA[https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/]]></description>
+        </item>
+      
         <item>
           <title><![CDATA[2025-07-19日刊]]></title>
           <link>https://yuansiwang.netlify.app/2025-07/2025-07-19/</link>
           <guid>https://yuansiwang.netlify.app/2025-07/2025-07-19/</guid>
-          <pubDate>Sat, 19 Jul 2025 09:32:23 GMT</pubDate>
-          <content:encoded><![CDATA[]]></content:encoded>
-          <description><![CDATA[]]></description>
+          <pubDate>Sat, 19 Jul 2025 18:00:46 GMT</pubDate>
+          <content:encoded><![CDATA[<p><a href="https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/">https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/</a></p>]]></content:encoded>
+          <description><![CDATA[https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/]]></description>
         </item>
       
         <item>

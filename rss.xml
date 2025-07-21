@@ -5,9 +5,18 @@
     <link>https://yuansiwang.netlify.app</link>
     <description> 近 7 天的AI日报</description>
     <language>zh-cn</language>
-    <lastBuildDate>Sun, 20 Jul 2025 02:22:19 GMT</lastBuildDate>
+    <lastBuildDate>Mon, 21 Jul 2025 01:05:10 GMT</lastBuildDate>
     <atom:link href="https://ai-daily.myanke2015.workers.dev/rss" rel="self" type="application/rss+xml" />
     
+        <item>
+          <title><![CDATA[2025-07-21日刊]]></title>
+          <link>https://yuansiwang.netlify.app/2025-07/2025-07-21/</link>
+          <guid>https://yuansiwang.netlify.app/2025-07/2025-07-21/</guid>
+          <pubDate>Mon, 21 Jul 2025 09:40:24 GMT</pubDate>
+          <content:encoded><![CDATA[<p><a href="https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/">https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/</a></p>]]></content:encoded>
+          <description><![CDATA[https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/]]></description>
+        </item>
+      
         <item>
           <title><![CDATA[2025-07-20日刊]]></title>
           <link>https://yuansiwang.netlify.app/2025-07/2025-07-20/</link>
@@ -60,16 +69,6 @@
           <pubDate>Tue, 15 Jul 2025 22:59:25 GMT</pubDate>
           <content:encoded><![CDATA[]]></content:encoded>
           <description><![CDATA[]]></description>
-        </item>
-      
-        <item>
-          <title><![CDATA[2025-07-14日刊]]></title>
-          <link>https://yuansiwang.netlify.app/2025-07/2025-07-14/</link>
-          <guid>https://yuansiwang.netlify.app/2025-07/2025-07-14/</guid>
-          <pubDate>Tue, 15 Jul 2025 13:09:21 GMT</pubDate>
-          <content:encoded><![CDATA[<h2>猿思网洞察日报 2025/7/14</h2><blockquote><p><code>猿思 日报</code></p></blockquote><h3><strong>AI内容摘要</strong></h3><pre><code>本文介绍了多个AI产品及开源项目，涵盖代码生成、量化投资、广告拦截、电商平台、AI查询引擎等领域。  这些工具旨在提升效率，解决实际问题，但同时也需关注其潜在的负面影响。  部分项目如Claude-code和ComfyUI体现了AI技术在代码生成和图像处理方面的进步。
-</code></pre><h1><strong>AI产品与功能更新</strong></h1><ol><li>1.<strong>claude-code</strong>: 一个在终端中使用自然语言编写、解释代码和管理Git的编程助手，结合了<strong>自然语言</strong>和<strong>代码自动生成</strong>功能。</li><li>2.<strong>markitdown</strong>: 微软出品的工具，用于将各种文件格式转换为<strong>Markdown</strong>格式。</li><li>3.<strong>uBlock</strong>: 一个轻量级的浏览器广告拦截器，能够提升网页浏览速度，解决<strong>广告拦截</strong>问题。</li><li>4.<strong>qlib</strong>: 微软出品的面向人工智能的量化投资平台，支持各种机器学习模型，例如监督学习、市场动态建模和强化学习，并整合了自动化研发流程的RD-Agent，是<strong>量化投资</strong>领域的<strong>全能选手</strong>。</li><li>5.<strong>Vercel commerce</strong>: 一个基于Next.js的电商平台，<strong>简单易用，效率高</strong>，适合快速搭建电商网站。</li><li>6.<strong>mindsdb</strong>: 一个AI查询引擎，可以对大型联邦数据进行查询并构建能够回答问题的AI，就像一个<strong>无所不知的超级数据库</strong>。</li><li>7.<strong>free-for-dev</strong>: 收集整理了一大堆SaaS、PaaS和IaaS服务的<strong>试用版或基础版</strong>，对从事<strong>DevOps和基础设施开发</strong>的小伙伴非常实用。</li><li>8.<strong>webvm</strong>: 一个可以在网页上运行的<strong>虚拟机</strong>，提供轻量级和便捷的虚拟机体验。</li><li>9.<strong>ART</strong>: 一个强化学习训练工具，可以训练各种<strong>多步骤智能体</strong>，并支持多种大模型，例如<strong>Qwen2.5、Qwen3、Llama、Kimi</strong>等，在<strong>强化学习</strong>领域具有巨大潜力。</li><li>10.<strong>KitchenOwl</strong>: 一个<strong>自托管的购物清单和食谱管理器</strong>，用Flask和Flutter开发，方便管理食材和食谱。</li><li>11.<strong>ComfyUI</strong>: 一个功能强大的<strong>扩散模型GUI、API和后端</strong>，采用图/节点界面，方便AI图像生成。</li><li>12.<strong>graphiti</strong>: 一个致力于构建<strong>用于AI智能体的实时知识图谱</strong>的项目，预示着未来AI将拥有更强大的知识处理能力。</li></ol><h1><strong>AI前沿研究</strong></h1><ol><li><ol><li><strong>claude-code</strong>: 利用<strong>自然语言</strong>处理技术，实现代码的自动生成和理解。</li></ol></li><li><ol start="2"><li><strong>qlib</strong>: 应用了多种<strong>机器学习模型</strong>，例如监督学习、市场动态建模和强化学习，用于量化投资。</li></ol></li><li><ol start="3"><li><strong>mindsdb</strong>:  构建能够回答问题的AI，实现对大型联邦数据的<strong>智能查询</strong>。</li></ol></li><li><ol start="4"><li><strong>ART</strong>:  一个<strong>强化学习</strong>训练工具，用于训练各种多步骤智能体，处理现实世界中的任务。</li></ol></li><li><ol start="5"><li><strong>ComfyUI</strong>:  基于<strong>扩散模型</strong>的AI图像生成工具，提供强大的GUI和API。</li></ol></li><li><ol start="6"><li><strong>graphiti</strong>:  致力于构建<strong>实时知识图谱</strong>，用于提升AI的知识处理能力。</li></ol></li></ol><h1><strong>AI行业展望与社会影响</strong></h1><ol><li><ol><li><strong>claude-code</strong>:  过度依赖此类工具可能导致编程能力退化，需要谨慎使用。</li></ol></li><li><ol start="2"><li><strong>uBlock</strong>:  广告拦截工具的普及需要考虑对依赖广告生存的网站的影响，需要寻找平衡点。</li></ol></li><li><ol start="3"><li><strong>qlib</strong>:  AI技术在<strong>量化投资</strong>领域的应用，可能会改变金融行业的格局。</li></ol></li><li><ol start="4"><li><strong>mindsdb</strong>:  强大的数据查询能力可能带来数据安全和隐私方面的挑战。</li></ol></li><li><ol start="5"><li><strong>ComfyUI</strong>:  AI图像生成工具的滥用可能带来版权和伦理问题。</li></ol></li><li><ol start="6"><li><strong>graphiti</strong>:  实时知识图谱技术的发展可能带来AI伦理和安全方面的新问题。</li></ol></li></ol><h1><strong>科技博主观点</strong></h1><ol><li><ol><li>这三个项目都各有千秋，代表着不同领域的技术发展趋势，也反映了程序员对效率和便捷性的追求。但同时，我们也要警惕技术带来的负面影响，并思考如何更好地利用这些工具，避免被工具所束缚。</li></ol></li><li><ol start="2"><li>这三个项目各有千秋，<strong>qlib</strong>适合金融科技领域，<strong>commerce</strong>瞄准电商市场，<strong>mindsdb</strong>则致力于解决大数据查询难题。未来，它们的发展方向和应用场景值得我们持续关注，说不定会带来意想不到的惊喜！</li></ol></li><li><ol start="3"><li>这三个项目代表了软件开发领域的三个不同方向：<strong>实用工具、技术创新和AI研究</strong>。它们都各有特色，也反映了当前软件开发领域的热门趋势。未来，相信会有更多类似的优秀项目出现，推动着软件开发技术不断向前发展！</li></ol></li><li><ol start="4"><li>这三个项目都代表了不同领域的有趣尝试，分别指向了效率提升、生活便利以及程序开发效率的提升。 未来会有更多类似的项目出现，彻底改变我们的工作和生活方式吗？ 这值得我们深思！</li></ol></li></ol><h1><strong>开源TOP项目</strong></h1><ol><li><ol><li><strong>claude-code</strong> (代码自动生成工具)</li></ol></li><li><ol start="2"><li><strong>markitdown</strong> (文件格式转换工具)</li></ol></li><li><ol start="3"><li><strong>uBlock</strong> (广告拦截器)</li></ol></li><li><ol start="4"><li><strong>qlib</strong> (人工智能量化投资平台)</li></ol></li><li><ol start="5"><li><strong>Vercel commerce</strong> (基于Next.js的电商平台)</li></ol></li><li><ol start="6"><li><strong>mindsdb</strong> (AI查询引擎)</li></ol></li><li><ol start="7"><li><strong>free-for-dev</strong> (免费开发资源集合)</li></ol></li><li><ol start="8"><li><strong>webvm</strong> (网页虚拟机)</li></ol></li><li><ol start="9"><li><strong>ART</strong> (强化学习训练工具)</li></ol></li><li><ol start="10"><li><strong>the-book-of-secret-knowledge</strong> (知识宝典)</li></ol></li><li><ol start="11"><li><strong>WirelessAndroidAutoDongle</strong> (无线Android Auto Dongle)</li></ol></li><li><ol start="12"><li><strong>claude-code-router</strong> (基于Claude Code的代码基础设施)</li></ol></li><li><ol start="13"><li><strong>KitchenOwl</strong> (购物清单和食谱管理器)</li></ol></li><li><ol start="14"><li><strong>ComfyUI</strong> (扩散模型GUI)</li></ol></li><li><ol start="15"><li><strong>graphiti</strong> (用于AI智能体的实时知识图谱)</li></ol></li></ol><h1><strong>社媒分享</strong></h1><ol><li><ol><li>GitHub 上又出现了一堆酷炫的项目！</li></ol></li><li><ol start="2"><li>这三个GitHub项目可真是让人眼前一亮！</li></ol></li><li><ol start="3"><li>哇哦，这三个GitHub项目真是各有千秋！</li></ol></li><li><ol start="4"><li>哇哦！GitHub 上又出现了一些炫酷的项目！</li></ol></li><li><ol start="5"><li>最近GitHub上涌现出一些令人兴奋的开源项目！</li></ol></li></ol>]]></content:encoded>
-          <description><![CDATA[猿思网洞察日报 2025/7/14 猿思 日报 AI内容摘要 本文介绍了多个AI产品及开源项目，涵盖代码生成、量化投资、广告拦截、电商平台、AI查询引擎等领域。 这些工具旨在提升效率，解决实际问题，但同时也需关注其潜在的负面影响。 部分项目如Claude-code和ComfyUI体现了AI技术在代码生成和图像处理方面的进步。 AI产品与功能更新 1. claude-code : 一个在终端中使用自]]></description>
         </item>
       
   </channel>

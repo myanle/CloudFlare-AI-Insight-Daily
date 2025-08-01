@@ -1,0 +1,280 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>07-29-日刊 - AI 日报 By 猿思网</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="为您精选 AI 领域的最新动态，包括行业新闻、热门开源项目、前沿学术论文、科技大V社交媒体言论，并通过 Google Gemini 模型进行智能处理与摘要生成，最终自动发布到 GitHub Pages 生成 AI 日报">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AI 日报 By 猿思网</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/myanle/CloudFlare-AI-Insight-Daily" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="猿思网洞察日报-2025729"><a class="header" href="#猿思网洞察日报-2025729">猿思网洞察日报 2025/7/29</a></h2>
+<blockquote>
+<p><code>猿思 日报</code></p>
+</blockquote>
+<h3 id="ai内容摘要"><a class="header" href="#ai内容摘要"><strong>AI内容摘要</strong></a></h3>
+<pre><code>近期AI领域动态频繁，大语言模型应用蓬勃发展，多个GitHub项目例如awesome-llm-apps和Genesis备受关注。  业界人士讨论了LLM与智能体协同进化，以及Agent和Workflow的关系，观点存在差异。  同时，对模型架构、训练数据以及开源闭源等问题也进行了深入探讨。
+围绕模型能力，有评论指出ChatGPT在分析方面优于Gemini，也有人分享了Claude Code在创意写作中的应用。  马斯克将LLM比作蒸汽机，反映了人们对AI技术发展的复杂情感。
+技术发展方向涉及数字化、规范化和渲染等，Agent和Workflow的关系仍需进一步探索。
+</code></pre>
+<h3 id="今日ai资讯"><a class="header" href="#今日ai资讯"><strong>今日AI资讯</strong></a></h3>
+<ol>
+<li>
+<p>🎉🌟 <strong>大语言模型应用集锦：</strong> <code>awesome-llm-apps</code> 项目收录了大量基于<strong>OpenAI</strong>、<strong>Anthropic</strong>、<strong>Gemini</strong> 等平台及开源模型的<strong>大语言模型 (LLM)</strong> 应用，涵盖<strong>AI智能体</strong>和<strong>检索增强生成 (RAG)</strong> 技术，GitHub 星标已达 52923 颗！<a href="https://github.com/Shubhamsaboo/awesome-llm-apps">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🤖🌍 <strong>通用机器人与具身AI生成世界：</strong> <code>Genesis</code> 项目构建了一个用于<strong>通用机器人</strong>和<strong>具身AI学习</strong>的生成式世界，为机器人和AI发展带来新可能，GitHub 星标已达 26613 颗！<a href="https://github.com/Genesis-Embodied-AI/Genesis">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🧑‍🍳📚 <strong>AI开发食谱：</strong> <code>ai-cookbook</code> 项目提供丰富的<strong>AI系统构建示例和教程</strong>，帮助开发者学习和实践AI开发，GitHub 星标已达 2115 颗！<a href="https://github.com/daveebbelaar/ai-cookbook">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🤔 <strong>Andrej Karpathy 与"幻觉”：</strong> <strong>Andrej Karpathy</strong> 早在 2015 年就用"<strong>幻觉</strong>(hallucinations)”形容 AI 模型生成无意义内容，并提出<strong>软件 2.0</strong>、<strong>软件 3.0</strong>、<strong>氛围式编程</strong>、<strong>细菌式编程</strong>和<strong>上下文工程</strong>等重要概念。<a href="https://karpathy.medium.com/">🔗 Karpathy 的 Medium 博客</a></p>
+</li>
+<li>
+<p>🔥 <strong>大模型圆桌辩论：</strong> 2025 世界人工智能大会上，一场关于<strong>模型训练范式</strong>、<strong>模型架构</strong>、<strong>训练数据</strong>和<strong>开源 vs 闭源</strong>的激烈辩论，探讨了<strong>预训练和强化学习的平衡</strong>、<strong>Transformer 架构的局限性</strong>、<strong>合成数据的风险</strong>以及<strong>基础模型与 Agent 的双轨发展</strong>等问题。<a href="https://www.jiqizhixin.com/articles/2025-07-28-5">🔗 相关报道</a></p>
+</li>
+<li>
+<p>📚 <strong>tldr：命令行速查表：</strong> tldr 项目是一个协作的命令行速查表项目，GitHub 星标超过 57000 颗。<a href="https://github.com/tldr-pages/tldr">🔗 tldr 项目</a></p>
+</li>
+<li>
+<p>🤔 <strong>LLM 和智能体 (Agent) 的协同进化：</strong> 宝玉认为，随着 LLM 生成能力提升，Agent 可以生成 Workflow，两者并非相互排斥而是嵌套关系，确定性高、重复性强的过程可固化成 Workflow 供 Agent 使用。</p>
+</li>
+<li>
+<p>🤖 <strong>智能体 (Agent) 和工作流 (Workflow) 的本质：</strong> 宝玉认为 Agent/Workflow 是工作自动化的延续，本质上是更高效地完成任务，未来可利用 LLM 生成更智能高效的 Workflow。</p>
+</li>
+<li>
+<p>😂 <strong>马斯克的"真凶”比喻：</strong> 马斯克将 LLM 比作蒸汽机，反映了人们对技术发展带来的变革和影响的复杂情感，提示我们需要对新兴技术保持谨慎乐观态度。</p>
+</li>
+<li>
+<p>🤔😂 <strong>ChatGPT 对比 Gemini：</strong> 一位 Reddit 用户认为 ChatGPT 在分析和对比方面表现出色，而 Gemini 容易被含糊不清的词语迷惑。</p>
+</li>
+<li>
+<p>🚀 <strong>Claude Code 助力创意写作：</strong> 用户分享了使用 Claude Code 进行创意写作的经验，并计划将其与 MCP 工具结合使用，展现了<strong>多模型协同工作</strong>的可能性。</p>
+</li>
+<li>
+<p>⚡️ <strong>Gemini 2.5 Flash Lite：</strong> 用户发现 Gemini 2.5 Flash Lite 在转录方面的性能优于 Gemini 2.5 Pro，且速度极快，体现了不同模型版本在特定任务上的差异，以及<strong>AI 模型组合应用</strong>的未来趋势。</p>
+</li>
+<li>
+<p>🤔 <strong>Agent 和 Workflow 的关系：</strong> 宝玉、wwwgoubuli 等人在 X 平台上讨论了 Agent 和 Workflow 的关系，有人认为 Workflow 是 Agent 的高级形态，也有人认为两者是并列关系。</p>
+</li>
+<li>
+<p>🤯 <strong>观点碰撞：</strong>  关于 Agent 和 Workflow 的关系，有人认为 Workflow 是 Agent 的高级形态，也有人认为两者是并列关系，目前技术尚处于发展初期。</p>
+</li>
+<li>
+<p>🤖 <strong>技术展望：</strong>  讨论涉及 <strong>数字化</strong>、<strong>规范化</strong> 和 <strong>渲染</strong> 等技术发展方向，Agent 和 Workflow 的关系复杂且充满变数。</p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../daily/2025-07/2025-07-30.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../daily/2025-07/2025-07-28.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../daily/2025-07/2025-07-30.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../daily/2025-07/2025-07-28.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

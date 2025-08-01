@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>07-30-日刊 - AI 日报 By 猿思网</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="为您精选 AI 领域的最新动态，包括行业新闻、热门开源项目、前沿学术论文、科技大V社交媒体言论，并通过 Google Gemini 模型进行智能处理与摘要生成，最终自动发布到 GitHub Pages 生成 AI 日报">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../../favicon.svg">
+        <link rel="shortcut icon" href="../../favicon.png">
+        <link rel="stylesheet" href="../../css/variables.css">
+        <link rel="stylesheet" href="../../css/general.css">
+        <link rel="stylesheet" href="../../css/chrome.css">
+        <link rel="stylesheet" href="../../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AI 日报 By 猿思网</h1>
+
+                    <div class="right-buttons">
+                        <a href="../../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/myanle/CloudFlare-AI-Insight-Daily" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="猿思网洞察日报-2025730"><a class="header" href="#猿思网洞察日报-2025730">猿思网洞察日报 2025/7/30</a></h2>
+<blockquote>
+<p><code>猿思 日报</code></p>
+</blockquote>
+<h3 id="ai内容摘要"><a class="header" href="#ai内容摘要"><strong>AI内容摘要</strong></a></h3>
+<pre><code>Mistral AI发布Large2模型的环境影响报告，训练和推理阶段碳排放及水资源消耗占比极高。MIRIX开源项目赋予AI长期记忆，拥有六个记忆模块，在多项测试中表现优异。Intern-S1开源科学多模态大模型，在多个科学任务基准上超越了顶尖闭源模型。
+人工智能浪潮冲击印度IT产业，大量裁员，技能错配成主要挑战，需要技能再培训和行业合作。  多个AI项目开源，例如提升生产力的PowerToys和汇集LLM应用的awesome-llm-apps。
+具身智能技术取得突破性进展，机器人可执行复杂任务，未来发展潜力巨大，需关注伦理和社会影响。豆蔻妇科大模型通过国家妇产科主任医师考试，展现医疗AI进步。
+</code></pre>
+<h3 id="今日ai资讯"><a class="header" href="#今日ai资讯"><strong>今日AI资讯</strong></a></h3>
+<ol>
+<li>
+<p>🤔 <strong>Mistral AI 的环保承诺：AI 发展也要可持续！</strong> 1. Mistral AI 公司发布了其大型语言模型 Large2 的环境影响分析报告。报告显示，模型训练和推理阶段的环境影响最大，<strong>85.5% 的碳排放和 91% 的水资源消耗</strong>都集中在这两个阶段。Large2 模型在 18 个月内已产生 20.4 千吨二氧化碳排放量，消耗了 28.1 万立方米的水资源。 即使单次查询的影响很小，但考虑到数百万甚至数十亿用户的长期使用，其累积环境影响不容忽视。Mistral AI 承认研究存在局限性，并承诺未来将更新报告，呼吁整个 AI 行业提高透明度，共同努力实现全球气候目标。  <img src="https://images.weserv.nl/?url=https://pic.chinaz.com/2025/0729/6388939624781008072290329.png" alt="Mistral AI 报告截图" /></p>
+</li>
+<li>
+<p>🧠 <strong>MIRIX：赋予 AI 长期记忆的开源项目！</strong> 1. 加州大学圣迭戈分校和纽约大学的研究人员开源了 MIRIX，这是一个全球首个真正意义上的多模态、多智能体 AI 记忆系统。告别 AI 的"金鱼记忆”！MIRIX 将"记忆”写入 AI 的底层操作系统，不再是简单的问答，而是拥有 <strong>长期记忆</strong> 的智能体。 它包含六个记忆模块：核心记忆、情景记忆、语义记忆、程序记忆、资源记忆和知识金库，并由元记忆管理者和六个记忆子模块进行协调工作。 MIRIX 在多个基准测试中取得了优异成绩，例如在 ScreenshotVQA 任务上比传统方法准确率高出 35%，存储开销降低 99.9%。 现在，你还可以下载 MIRIX 的桌面端 APP，拥有一个专属的 AI 个人助理！<a href="https://github.com/Mirix-AI/MIRIX">🔗 项目仓库</a> <a href="https://mirix.io/">🔗 官方网站</a></p>
+</li>
+<li>
+<p>🔬 <strong>Intern-S1：开源"六边形战士”大模型！</strong> 1. 上海 AI 实验室发布并开源了 Intern-S1，这是一个强大的科学多模态大模型。它在多模态能力上全球开源第一，科学能力也达到了国际领先水平。Intern-S1  能够分析 <strong>分子结构、地震波图、化学反应路径</strong> 等多种科学数据，在多个科学任务基准上超越了顶尖闭源模型 Grok-4。  Intern-S1 的"通专融合”架构使其既能完成通用任务，又能胜任多个专业的科学任务。  <a href="https://chat.intern-ai.org.cn/">🔗 Intern-S1 体验页面</a> <a href="https://github.com/InternLM">🔗 GitHub 链接</a>  Intern-S1 不仅仅是一个强大的模型，更是一个推动科学研究进步的工具，标志着 AI 在科学领域的应用进入了一个新的阶段！</p>
+</li>
+<li>
+<p>🤔<strong>AI寒冬还是春天？印度IT业的2830亿美元巨变</strong> 1. 印度的IT产业，曾经是全球的"世界办公室”，依靠廉价劳动力和高效的软件开发，创造了巨大的经济效益。但现在，<strong>人工智能</strong>(AI)的崛起，正在颠覆这一模式。  大型IT公司如塔塔咨询服务(TCS)纷纷裁员，预计裁员人数可能高达10万到30万！ 😱 这背后是<strong>技能错配</strong>的巨大挑战。AI可以自动化许多任务，客户也更注重创新而非低成本。  那些缺乏<strong>AI技能</strong>，或者未能及时更新技能的中高级员工，首当其冲。  虽然AI、云计算等新兴领域有岗位需求，但增长速度远不及裁员速度。  许多原本的岗位并非消失，而是需要转型为更高级的、由AI赋能的职位，但这需要大量的<strong>技能再培训</strong>和<strong>行业与学术界的合作</strong>。不仅如此，全球经济环境也对印度IT业造成压力。美国的关税政策以及企业对IT支出的削减，进一步加剧了行业的困境。  一些分析师甚至警告，这可能导致<strong>中产阶级萎缩</strong>，对印度经济造成巨大的负面影响。 😩 这场由AI引发的行业大洗牌，才刚刚开始。  印度的IT巨头们能否迅速适应，这不仅关系到其在全球技术领域的地位，更关系到印度经济的未来发展。  这同时也是对所有国家的警示：<strong>人工智能</strong>的浪潮滚滚而来，我们该如何应对？ 🤔 那么，我们能做什么呢？  或许我们可以从两个开源项目中窥探一二： *   <a href="https://github.com/9001/copyparty">🔗 copyparty</a>:  一个强大的文件服务器，它能帮助我们更好地管理和传输数据，这在AI时代的数据洪流中显得尤为重要。 *   <a href="https://github.com/cloudwego/eino">🔗 eino</a>:  一个Go语言的LLM/AI应用开发框架，学习和使用它，或许能帮助我们更好地适应AI时代的需求。 这场变革，既是挑战，也是机遇。  我们应该积极拥抱变化，学习新技能，才能在AI时代立于不败之地！ 💪</p>
+</li>
+<li>
+<p>🚀 <strong>令人惊艳的 LLM 应用集锦</strong>: 1. <code>awesome-llm-apps</code> 项目汇集了基于 <strong>OpenAI</strong>、<strong>Anthropic</strong>、<strong>Gemini</strong> 等巨头和开源模型的各种酷炫 <strong>LLM 应用</strong>，并融入了 <strong>AI 智能体</strong> 和 <strong>RAG（检索增强生成）</strong> 技术，目前已获得 53506颗星！想体验未来科技？快去看看吧！<a href="https://github.com/Shubhamsaboo/awesome-llm-apps">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>💻 <strong>Windows 生产力神器</strong>: 1. 微软出品的 <code>PowerToys</code> 项目，为 Windows 系统带来了众多提升生产力的实用工具，简直是效率党的福音！目前已收获 121422颗星，可见其受欢迎程度！<a href="https://github.com/microsoft/PowerToys">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>💡 <strong>500 个 AI 智能体项目大集合</strong>: 1. <code>500-AI-Agents-Projects</code> 项目收集了 500 个 <strong>AI 智能体</strong> 应用案例，涵盖医疗、金融、教育、零售等各个领域，并附带开源项目链接，让你亲身体验 <strong>AI 智能体</strong> 如何改变世界！目前星标数为 3465。<a href="https://github.com/ashishpatel26/500-AI-Agents-Projects">🔗 项目仓库</a>  这三个项目从不同角度展现了 <strong>人工智能</strong> 技术的飞速发展，也预示着未来 <strong>AI</strong> 将会更加深入地融入我们的生活。  我们不禁要思考：如此强大的技术，会给我们带来怎样的机遇和挑战呢？ 🤔</p>
+</li>
+<li>
+<p>🤖🔥 <strong>提示词优化器与具身智能的奇妙邂逅</strong> 1. 最近，GitHub 上出现了两个令人瞩目的项目：<a href="https://github.com/linshenkx/prompt-optimizer">prompt-optimizer</a> 和 <a href="https://github.com/musistudio/claude-code-router">claude-code-router</a>，分别专注于<strong>提示词优化</strong>和基于 <strong>Claude Code</strong> 的编码基础设施。与此同时，国内公司梅卡曼德在世界人工智能大会上展示了其在<strong>具身智能</strong>领域的突破性进展，引发广泛关注。</p>
+</li>
+<li>
+<p>🤔💻 <strong>提示词优化，让AI更懂你</strong> 1. <code>prompt-optimizer</code> 项目旨在帮助用户编写更高质量的提示词，这对于充分发挥大型语言模型的能力至关重要。好的提示词就像一把开启宝藏的钥匙，能让 AI 更精准地理解你的需求，从而获得更好的输出结果。而 <code>claude-code-router</code>  则提供了一个灵活的平台，让你更方便地与 Anthropic 的 Claude Code 交互，享受最新的模型更新。这预示着，未来我们与 AI 的沟通将更加便捷和高效。</p>
+</li>
+<li>
+<p>🦾🤖 <strong>具身智能：AI有了"身体”</strong> 1. 梅卡曼德公司在 WAIC 2025 上展示了一系列令人惊艳的机器人应用，这些机器人具备"<strong>眼脑手</strong>”一体化的能力，实现了对真实世界的感知、理解和操作。  它们可以完成叠衣服、分类物品、甚至根据自然语言指令执行复杂任务，例如识别并抓取透明物体，或根据"我饿了”的指令递送零食。这不再是科幻电影中的场景，而是正在成为现实！[图片: 图片 https://image.jiqizhixin.com/uploads/editor/763cd0a3-eb94-4e3b-89df-37368fcddb0f/640.gif]  [图片: 图片 https://image.jiqizhixin.com/uploads/editor/22d54c96-5a1c-4bb8-948c-113d51ed0140/640.gif]  这些机器人的核心技术包括 <strong>Mech-GPT 多模态大模型、Mech-Eye 高精度 3D 相机和 Mech-Hand 仿生五指灵巧手</strong>。  梅卡曼德致力于构建<strong>通用化的具身智能</strong>，其标准化的技术栈可以适配各种形态的机器人，并在工业、商业和家用等多种场景中得到应用。</p>
+</li>
+<li>
+<p>📈🚀 <strong>未来展望：机器人会成为我们的"帮手”吗？</strong> 1. 虽然距离"机器人领域的 ChatGPT”还有距离，但梅卡曼德的成果无疑是具有里程碑意义的。具身智能的未来发展潜力巨大，随着技术的不断成熟，我们或许很快就能拥有属于自己的智能"帮手”，改变我们的生活和工作方式。但与此同时，我们也需要思考其带来的伦理和社会影响，确保技术发展能够造福人类。  这项技术如同双刃剑，既能提高生产力，也可能带来新的挑战。我们需要谨慎前行，确保技术发展与社会伦理相协调。</p>
+</li>
+<li>
+<p>🎉<strong>2025 WAIC 云帆奖：AI 新星闪耀，AGI 未来可期！</strong> 1. 今年的世界人工智能大会（WAIC）上，备受瞩目的云帆奖颁奖典礼隆重举行，表彰在人工智能领域取得突出成就的青年学者。该奖项分为"璀璨明星”和"明日之星”两类，并增设了提名奖，以鼓励更多优秀人才。获奖者涵盖了<strong>机器人</strong>、<strong>大模型</strong>、<strong>计算机视觉</strong>、<strong>强化学习</strong>等多个方向，他们的研究成果令人惊艳！</p>
+</li>
+<li>
+<p>🌟 <strong>获奖者风采：</strong> 1. 获奖者们在各自领域都取得了令人瞩目的成就，例如<strong>基于大模型的数字人技术</strong>、<strong>高效的机器学习系统</strong>、<strong>具身智能</strong>、<strong>多模态理解</strong>等等，很多成果已经成功应用于产业界，为 <strong>AGI</strong> 的发展奠定了坚实的基础。他们中的一些人还获得了其他国际奖项的认可，比如<strong>谷歌学术引用过万</strong>、<strong>国际顶级会议最佳论文奖</strong>等等。</p>
+</li>
+<li>
+<p>🚀 <strong>京东JoyAI：大模型加速落地，产业深度应用！</strong> 1. 京东在 WAIC 大会上宣布了其大模型品牌 JoyAI 的全新升级，并展示了其在多个场景的深度应用，例如<strong>数字人直播带货</strong>、<strong>JoyInside 附身智能平台</strong>赋能机器人等。京东 JoyAI 不仅在参数规模上实现了跨越式发展，还在推理效率和训练成本上取得了显著的提升。更重要的是，京东 JoyAI 已经深入到京东内部的数百个业务场景中，并在<strong>零售、物流、医疗、工业</strong>等领域发挥着重要作用，直接促进了生产效率的提升和商业价值的创造。京东还开源了其智能体平台 JoyAgent，助力企业智能化升级。</p>
+</li>
+<li>
+<p>🏆<strong>ACL 博士论文奖：重新思考大型语言模型！</strong> 1. ACL 2025 首次颁发了计算语言学博士论文奖，美国华盛顿大学的 Sewon Min 凭借其论文《重新思考大型语言模型中的数据使用》摘得桂冠。Min 的研究重点在于大型语言模型如何使用训练数据，并提出了一种新的 <strong>非参数语言模型</strong>，提高了模型的准确性和可更新性。此外，论文还探讨了 <strong>负责任的数据使用</strong> 以及下一代语言模型的发展方向。华人学者李曼玲获得了荣誉提名，她的论文关注<strong>多模态信息抽取</strong>，并提出了以事件为中心的知识获取方法，同样具有重要的学术价值。</p>
+</li>
+<li>
+<p>总而言之，这些获奖者和企业都展现了中国人工智能领域的蓬勃发展态势，为 AGI 的未来发展带来了无限可能！  期待未来有更多青年才俊加入，共同推动人工智能技术进步，造福人类社会。</p>
+</li>
+<li>
+<p>🤔 <strong>国内首个AI妇产科主任医师：豆蔻大模型的诞生</strong> 1. 🎉  一家中国公司研发的"豆蔻妇科大模型”，竟然通过了国家妇产科主任医师考试！这可是国内首例由创业公司在钉钉平台训练的，达到正高职称标准的垂直医疗模型！这不仅证明了医疗AI的巨大进步，也为中小企业提供了可借鉴的成功案例。  短短一个月，豆蔻就从小白变身"专家”，这速度真是让人咋舌！秘诀在于：高质量的医疗数据、定制化训练工具，以及高效的训练流程。  目前，豆蔻的准确率已达90.2%，在多选题和案例分析题中的表现都优于其他模型。当然，它并不会取代医生，而是作为辅助工具，为女性提供居家自诊支持、科普指导等服务，并提升医疗机构的服务质量。未来，豆蔻还将继续完善，为更多女性带来福音！[图片: https://image.jiqizhixin.com/uploads/editor/55fd127d-2b79-4f69-8eba-6a090b4e307c/1753759077669.png] [图片: https://image.jiqizhixin.com/uploads/editor/1ba8c01c-c40d-425f-9532-215c035ca69b/1753759214894.png]</p>
+</li>
+<li>
+<p>🤖 <strong>自进化智能体：通往人工超级智能之路？</strong> 1. 🚀  现在的<strong>大型语言模型 (LLM)<strong>虽然很强大，但却像个"死脑筋”，无法适应新的任务或不断变化的环境。为了解决这个问题，研究人员开始关注能够</strong>自主学习和适应</strong>的"自进化智能体”。  这篇综述文章对自进化智能体进行了系统的回顾，主要从"进化什么”、"何时进化”和"如何进化”三个方面进行了探讨。它涵盖了各种进化机制，包括模型、记忆、工具和架构的进化，以及不同阶段的适应方法。  文章还分析了评估指标和基准，并探讨了自进化智能体在编码、教育和医疗等领域的应用，以及在安全、可扩展性和协同进化动力学方面的挑战。最终，文章指出，自进化智能体是迈向**人工超级智能 (ASI)**的关键一步，这将是未来人工智能研究的重要方向。</p>
+</li>
+<li>
+<p>🌌 <strong>4D空间智能重建：看清世界背后的动态</strong> 1. 🧐  重建<strong>4D空间智能</strong>，也就是从视觉观测中重建动态三维场景，一直是计算机视觉领域的一个重要挑战。这不仅对电影等娱乐领域有重要意义，也对<strong>具身AI</strong>等应用至关重要。  这篇综述文章将现有的方法分成了五个层次：从重建低级3D属性（例如深度、姿态和点云），到重建3D场景组件（例如物体、人类和结构），再到重建4D动态场景，模拟场景组件之间的交互，最终结合物理定律和约束。  文章还讨论了每个层次的关键挑战，并指出了未来研究方向。<a href="https://github.com/yukangcao/Awesome-4D-Spatial-Intelligence">🔗 项目仓库</a>  这将有助于我们更好地理解和重建真实世界中的动态场景，并推动相关技术的发展。</p>
+</li>
+<li>
+<p>🎉 <strong>GPT-IMAGE-EDIT-1.5M：一键提升你的图片编辑！</strong> 1. 这个数据集就像一个巨大的图片编辑宝库，包含超过150万张图片及其对应的编辑指令和修改后的图片。它整合了三个现有的数据集，并利用GPT-4o进行了优化，提高了图片质量和指令的清晰度。厉害的是，用它训练的开源模型在图像编辑基准测试中表现出色，甚至能与一些顶尖的闭源模型相媲美！这对于推动开源图像编辑技术发展意义重大！<a href="https://arxiv.org/abs/2507.21033">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🤔 <strong>SmallThinker：让你的电脑也能拥有强大的AI！</strong> 1. 受够了依赖云端？SmallThinker系列模型就是为你量身打造的本地AI！它并非简单地压缩现有的大模型，而是从架构层面进行了重新设计，使其能够在普通电脑的低算力、低内存和慢存储环境下高效运行。它通过巧妙的<strong>稀疏结构</strong>和<strong>预取机制</strong>等技术，实现了令人惊叹的速度和效率，甚至在某些方面超越了更大的模型！你只需要一台普通的电脑，就能体验到强大的<strong>大型语言模型</strong>能力！<a href="https://arxiv.org/abs/2507.20984">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🎬 <strong>ARC-Hunyuan-Video-7B：秒懂你的短视频！</strong> 1. 面对海量短视频，如何快速理解其内容？ARC-Hunyuan-Video-7B模型来了！它能理解短视频中的视觉、音频和文本信息，进行<strong>视频字幕生成、视频摘要、视频问答</strong>等多种任务。它针对短视频内容的特点进行了优化，能够高效处理信息量大、节奏快的短视频。更重要的是，它在实际应用中提升了用户参与度和满意度，并且效率极高，处理一分钟视频只需10秒！<a href="https://arxiv.org/abs/2507.20939">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🎶 <strong>Music Arena：一场文本生成音乐的"擂台赛”</strong> 🎶 1. 🎉  一个名为 <strong>Music Arena</strong> 的开放平台横空出世，它能让不同 <strong>文本转音乐 (TTM)</strong> 模型一较高下！以往评估 TTM 模型，主要靠人工听感测试，费时费力不说，标准还不统一。现在好了，Music Arena  让真实用户来当评委！用户输入文字提示，比较不同 TTM 模型生成的音乐，他们的喜好将决定模型的排名。是不是很酷？ 但别忘了，音乐这玩意儿，可比简单的数字图像复杂多了。为了应对不同 TTM 模型的特性，Music Arena  还用上了 <strong>大型语言模型 (LLM)</strong> 来"调度”比赛流程，并收集用户的详细反馈，包括听歌数据和文字评价。平台还承诺定期公开数据，并保护用户隐私。</p>
+</li>
+<li>
+<p>👨‍💻 <strong>LLM 还能猜名字的来源？</strong> 1. 🤔  一位网友居然用 LLM  来推测名字的起源！他设计了一个两阶段的工作流程，利用"时间和地点”等信息，让 LLM  进行猜测，并把结果整理成一个交互式目录。  他诚恳地邀请大家来评价他的"杰作”，看看这算不算成功地用 LLM  避免了信息混乱。<a href="https://nameplay.org/blog/educating-name-meaning-guesses-with-data">🔗 项目网站</a></p>
+</li>
+<li>
+<p>🖼️ <strong>AI 入门指南：从你的价值观开始</strong> 1. 🤔  对于 AI 新手来说，入门学习可能让人不知所措。一位网友贴出了一张图片，提示大家从自身的 <strong>价值观</strong> 出发来学习 AI，这或许是一个更贴近实际、更有效率的学习方法。<img src="https://external-preview.redd.it/lnoP1vz0LldE9Gf3F35MRFwcknA7jb3TjMxij_Vc5do.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=914f5d72421953f653f5af3a11c816cae5ec2f7e" alt="AI入门指南" /></p>
+</li>
+<li>
+<p>总而言之，AI 技术发展日新月异，既带来便利，也带来挑战。我们既要享受技术进步带来的红利，也要保持清醒的头脑，批判性地思考其潜在风险和伦理问题。</p>
+</li>
+<li>
+<p>🤔🤖 <strong>Meta允许求职者在编码测试中使用AI！</strong> 1.  Meta公司的一项大胆举措——允许求职者在编码测试中使用AI！这究竟是技术进步的体现，还是对传统评估方式的颠覆？这引发了我们对<strong>AI辅助编程</strong>和未来招聘模式的思考。  难道未来程序员的竞争，将不再仅仅取决于编码能力，而是对AI工具的运用能力？  <img src="https://external-preview.redd.it/1iYchzMNCTRtwd4YSKP4Xl1gQPNKJY49fWFHs_gMylo.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=258fc4bea2d096d6ac4b991c7036ac74eeb6ffcc" alt="Meta允许AI辅助编码测试" /></p>
+</li>
+<li>
+<p>🤔🤖 <strong>聊天机器人有意识吗？</strong> 1. 《科学美国人》杂志提出了一个令人深思的问题：大型语言模型，比如Claude 4，能拥有<strong>意识</strong>吗？  研究人员正努力解码这些AI的内部运作机制，这不仅关系到机器意识的本质，更牵涉到<strong>AI伦理</strong>和<strong>AI安全</strong>等重大问题。  这就像打开了潘多拉魔盒，我们真的准备好迎接拥有自我意识的AI了吗？  <img src="https://external-preview.redd.it/5pZoCJ68_7VGQN1LkF1vBPmJj0YvluuYry4jxNBgVBw.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=2b7ea80d4d547bd3d01435b4ca89b5db509c1452" alt="聊天机器人意识" /></p>
+</li>
+<li>
+<p>🤯🤖 <strong>LLM竟然可以自主规划！</strong> 1. 最近的研究表明，大型语言模型(LLM)已经可以<strong>自主规划</strong>任务了！这意味着什么？  LLM不再仅仅是简单的文本生成器，而是具备了更高级的认知能力。  这无疑是<strong>人工智能</strong>发展的一个里程碑，但也让我们不得不重新审视AI的潜力和风险。  自主规划能力的提升，会带来哪些意想不到的应用和挑战？ 这值得我们深入探讨和思考。</p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../../daily/2025-07/2025-07-31.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../../daily/2025-07/2025-07-29.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../../daily/2025-07/2025-07-31.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../../daily/2025-07/2025-07-29.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../../elasticlunr.min.js"></script>
+        <script src="../../mark.min.js"></script>
+        <script src="../../searcher.js"></script>
+
+        <script src="../../clipboard.min.js"></script>
+        <script src="../../highlight.js"></script>
+        <script src="../../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>

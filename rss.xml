@@ -5,9 +5,18 @@
     <link>https://yuansiwang.netlify.app</link>
     <description> 近 7 天的AI日报</description>
     <language>zh-cn</language>
-    <lastBuildDate>Wed, 06 Aug 2025 02:11:07 GMT</lastBuildDate>
+    <lastBuildDate>Thu, 07 Aug 2025 01:03:25 GMT</lastBuildDate>
     <atom:link href="https://ai-daily.myanke2015.workers.dev/rss" rel="self" type="application/rss+xml" />
     
+        <item>
+          <title><![CDATA[2025-08-07日刊]]></title>
+          <link>https://yuansiwang.netlify.app/2025-08/2025-08-07/</link>
+          <guid>https://yuansiwang.netlify.app/2025-08/2025-08-07/</guid>
+          <pubDate>Thu, 07 Aug 2025 09:55:57 GMT</pubDate>
+          <content:encoded><![CDATA[<p><a href="https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/">https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/</a></p>]]></content:encoded>
+          <description><![CDATA[https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/]]></description>
+        </item>
+      
         <item>
           <title><![CDATA[2025-08-06日刊]]></title>
           <link>https://yuansiwang.netlify.app/2025-08/2025-08-06/</link>
@@ -58,15 +67,6 @@
           <link>https://yuansiwang.netlify.app/2025-08/2025-08-01/</link>
           <guid>https://yuansiwang.netlify.app/2025-08/2025-08-01/</guid>
           <pubDate>Fri, 01 Aug 2025 10:40:32 GMT</pubDate>
-          <content:encoded><![CDATA[<p><a href="https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/">https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/</a></p>]]></content:encoded>
-          <description><![CDATA[https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/]]></description>
-        </item>
-      
-        <item>
-          <title><![CDATA[2025-07-31日刊]]></title>
-          <link>https://yuansiwang.netlify.app/2025-07/2025-07-31/</link>
-          <guid>https://yuansiwang.netlify.app/2025-07/2025-07-31/</guid>
-          <pubDate>Thu, 31 Jul 2025 10:55:49 GMT</pubDate>
           <content:encoded><![CDATA[<p><a href="https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/">https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/</a></p>]]></content:encoded>
           <description><![CDATA[https://cdn.jsdelivr.net/gh/justlovemaki/imagehub@main/]]></description>
         </item>

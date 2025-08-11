@@ -1,0 +1,298 @@
+<!DOCTYPE HTML>
+<html lang="zh" class="light sidebar-visible" dir="ltr">
+    <head>
+        <!-- Book generated using mdBook -->
+        <meta charset="UTF-8">
+        <title>08-10-日刊 - AI 日报 By 猿思网</title>
+
+
+        <!-- Custom HTML head -->
+
+        <meta name="description" content="为您精选 AI 领域的最新动态，包括行业新闻、热门开源项目、前沿学术论文、科技大V社交媒体言论，并通过 Google Gemini 模型进行智能处理与摘要生成，最终自动发布到 GitHub Pages 生成 AI 日报">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="theme-color" content="#ffffff">
+
+        <link rel="icon" href="../favicon.svg">
+        <link rel="shortcut icon" href="../favicon.png">
+        <link rel="stylesheet" href="../css/variables.css">
+        <link rel="stylesheet" href="../css/general.css">
+        <link rel="stylesheet" href="../css/chrome.css">
+        <link rel="stylesheet" href="../css/print.css" media="print">
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="../FontAwesome/css/font-awesome.css">
+        <link rel="stylesheet" href="../fonts/fonts.css">
+
+        <!-- Highlight.js Stylesheets -->
+        <link rel="stylesheet" id="highlight-css" href="../highlight.css">
+        <link rel="stylesheet" id="tomorrow-night-css" href="../tomorrow-night.css">
+        <link rel="stylesheet" id="ayu-highlight-css" href="../ayu-highlight.css">
+
+        <!-- Custom theme stylesheets -->
+
+
+        <!-- Provide site root and default themes to javascript -->
+        <script>
+            const path_to_root = "../";
+            const default_light_theme = "light";
+            const default_dark_theme = "navy";
+        </script>
+        <!-- Start loading toc.js asap -->
+        <script src="../toc.js"></script>
+    </head>
+    <body>
+    <div id="mdbook-help-container">
+        <div id="mdbook-help-popup">
+            <h2 class="mdbook-help-title">Keyboard shortcuts</h2>
+            <div>
+                <p>Press <kbd>←</kbd> or <kbd>→</kbd> to navigate between chapters</p>
+                <p>Press <kbd>S</kbd> or <kbd>/</kbd> to search in the book</p>
+                <p>Press <kbd>?</kbd> to show this help</p>
+                <p>Press <kbd>Esc</kbd> to hide this help</p>
+            </div>
+        </div>
+    </div>
+    <div id="body-container">
+        <!-- Work around some values being stored in localStorage wrapped in quotes -->
+        <script>
+            try {
+                let theme = localStorage.getItem('mdbook-theme');
+                let sidebar = localStorage.getItem('mdbook-sidebar');
+
+                if (theme.startsWith('"') && theme.endsWith('"')) {
+                    localStorage.setItem('mdbook-theme', theme.slice(1, theme.length - 1));
+                }
+
+                if (sidebar.startsWith('"') && sidebar.endsWith('"')) {
+                    localStorage.setItem('mdbook-sidebar', sidebar.slice(1, sidebar.length - 1));
+                }
+            } catch (e) { }
+        </script>
+
+        <!-- Set the theme before any content is loaded, prevents flash -->
+        <script>
+            const default_theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? default_dark_theme : default_light_theme;
+            let theme;
+            try { theme = localStorage.getItem('mdbook-theme'); } catch(e) { }
+            if (theme === null || theme === undefined) { theme = default_theme; }
+            const html = document.documentElement;
+            html.classList.remove('light')
+            html.classList.add(theme);
+            html.classList.add("js");
+        </script>
+
+        <input type="checkbox" id="sidebar-toggle-anchor" class="hidden">
+
+        <!-- Hide / unhide sidebar before it is displayed -->
+        <script>
+            let sidebar = null;
+            const sidebar_toggle = document.getElementById("sidebar-toggle-anchor");
+            if (document.body.clientWidth >= 1080) {
+                try { sidebar = localStorage.getItem('mdbook-sidebar'); } catch(e) { }
+                sidebar = sidebar || 'visible';
+            } else {
+                sidebar = 'hidden';
+            }
+            sidebar_toggle.checked = sidebar === 'visible';
+            html.classList.remove('sidebar-visible');
+            html.classList.add("sidebar-" + sidebar);
+        </script>
+
+        <nav id="sidebar" class="sidebar" aria-label="Table of contents">
+            <!-- populated by js -->
+            <mdbook-sidebar-scrollbox class="sidebar-scrollbox"></mdbook-sidebar-scrollbox>
+            <noscript>
+                <iframe class="sidebar-iframe-outer" src="../toc.html"></iframe>
+            </noscript>
+            <div id="sidebar-resize-handle" class="sidebar-resize-handle">
+                <div class="sidebar-resize-indicator"></div>
+            </div>
+        </nav>
+
+        <div id="page-wrapper" class="page-wrapper">
+
+            <div class="page">
+                <div id="menu-bar-hover-placeholder"></div>
+                <div id="menu-bar" class="menu-bar sticky">
+                    <div class="left-buttons">
+                        <label id="sidebar-toggle" class="icon-button" for="sidebar-toggle-anchor" title="Toggle Table of Contents" aria-label="Toggle Table of Contents" aria-controls="sidebar">
+                            <i class="fa fa-bars"></i>
+                        </label>
+                        <button id="theme-toggle" class="icon-button" type="button" title="Change theme" aria-label="Change theme" aria-haspopup="true" aria-expanded="false" aria-controls="theme-list">
+                            <i class="fa fa-paint-brush"></i>
+                        </button>
+                        <ul id="theme-list" class="theme-popup" aria-label="Themes" role="menu">
+                            <li role="none"><button role="menuitem" class="theme" id="default_theme">Auto</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="light">Light</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="rust">Rust</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="coal">Coal</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="navy">Navy</button></li>
+                            <li role="none"><button role="menuitem" class="theme" id="ayu">Ayu</button></li>
+                        </ul>
+                        <button id="search-toggle" class="icon-button" type="button" title="Search (`/`)" aria-label="Toggle Searchbar" aria-expanded="false" aria-keyshortcuts="/ s" aria-controls="searchbar">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </div>
+
+                    <h1 class="menu-title">AI 日报 By 猿思网</h1>
+
+                    <div class="right-buttons">
+                        <a href="../print.html" title="Print this book" aria-label="Print this book">
+                            <i id="print-button" class="fa fa-print"></i>
+                        </a>
+                        <a href="https://github.com/myanle/CloudFlare-AI-Insight-Daily" title="Git repository" aria-label="Git repository">
+                            <i id="git-repository-button" class="fa fa-github"></i>
+                        </a>
+
+                    </div>
+                </div>
+
+                <div id="search-wrapper" class="hidden">
+                    <form id="searchbar-outer" class="searchbar-outer">
+                        <input type="search" id="searchbar" name="searchbar" placeholder="Search this book ..." aria-controls="searchresults-outer" aria-describedby="searchresults-header">
+                    </form>
+                    <div id="searchresults-outer" class="searchresults-outer hidden">
+                        <div id="searchresults-header" class="searchresults-header"></div>
+                        <ul id="searchresults">
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Apply ARIA attributes after the sidebar and the sidebar toggle button are added to the DOM -->
+                <script>
+                    document.getElementById('sidebar-toggle').setAttribute('aria-expanded', sidebar === 'visible');
+                    document.getElementById('sidebar').setAttribute('aria-hidden', sidebar !== 'visible');
+                    Array.from(document.querySelectorAll('#sidebar a')).forEach(function(link) {
+                        link.setAttribute('tabIndex', sidebar === 'visible' ? 0 : -1);
+                    });
+                </script>
+
+                <div id="content" class="content">
+                    <main>
+                        <h2 id="猿思网洞察日报-2025810"><a class="header" href="#猿思网洞察日报-2025810">猿思网洞察日报 2025/8/10</a></h2>
+<blockquote>
+<p><code>猿思 日报</code></p>
+</blockquote>
+<h3 id="ai内容摘要"><a class="header" href="#ai内容摘要"><strong>AI内容摘要</strong></a></h3>
+<pre><code>DeepMind发布的Aeneas模型可高效解读古罗马铭文，并推断其年代和地理位置，堪称考古研究的福音。Google Magenta的Magenta RealTime模型可实时生成音乐，支持风格切换与混合，应用广泛。MemU开源框架赋予AI记忆功能，能记住对话并根据上下文回应，提升用户体验。
+GenSeg框架通过AI生成数据，减少医学图像分割所需标注数据量，提高模型性能。奥特曼预测GPT-8可能治愈癌症，但AGI算力之争或引发战争，需警惕技术风险。
+清华团队突破Dijkstra算法瓶颈，提升地图导航等应用效率。多个引人注目的开源项目发布，包括高性能算法交易平台、本地大型语言模型和数字产品引擎等。
+</code></pre>
+<h3 id="今日ai资讯"><a class="header" href="#今日ai资讯"><strong>今日AI资讯</strong></a></h3>
+<ol>
+<li>
+<p>🎉🤔<strong>DeepMind的Aeneas模型：古罗马铭文解读神器</strong>：DeepMind发布的Aeneas模型，登上Nature期刊封面，它能够高效解读古罗马铭文，快速识别铭文间的细微联系，甚至能修复残缺的文字，并推测铭文的年代和地理位置。Aeneas通过将铭文转化成独特的"历史指纹”来识别铭文间的关联，并根据语言特征、政治意识形态等信息推断铭文的年代。其应用前景广阔，未来可以应用于其他古代语言和文字的解读，甚至可以帮助修复受损的文物，是<strong>考古研究的福音</strong>。<a href="predictingthepast.com">🔗 项目官网</a></p>
+</li>
+<li>
+<p>🎵🎼<strong>Magenta RealTime：AI实时音乐生成器</strong>：Google Magenta推出的Magenta RealTime（Magenta RT）开源模型，能根据你的指令实时生成音乐，实现<strong>音乐风格的实时切换和混合</strong>。其核心在于<strong>实时性、交互性和开源性</strong>，应用场景广泛，可以用于现场表演、游戏配乐、艺术装置等等。未来，它甚至可以根据你的情绪和状态，实时生成个性化的音乐，打造专属的<strong>AI音乐伴侣</strong>。<a href="https://magenta.withgoogle.com/magenta-realtime">🔗 项目地址</a></p>
+</li>
+<li>
+<p>🤖🧠<strong>MemU：赋予AI"记忆”的开源框架</strong>：MemU开源框架能让AI记住之前的对话，理解你的喜好，并根据上下文进行回应。其核心在于<strong>结构化记忆、高效检索和动态遗忘机制</strong>，它将记忆组织成可读、可编辑的文档，并根据重要程度自动调整记忆的权重。MemU可以应用于各种AI助手和虚拟伴侣，提升用户体验，未来还可以应用于教育、医疗等领域。<a href="https://github.com/NevaMind-AI/memU">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🎉🔬<strong>GenSeg：AI生成数据解决医学图像分割难题</strong>：加州大学圣地亚哥分校的研究人员开发的GenSeg三阶段框架，可以显著减少医学图像分割所需的<strong>标注数据</strong>量。GenSeg通过<strong>AI生成高质量的医学图像和对应的分割标注</strong>，即使只有几十张样本，也能训练出性能强大的分割模型。它是一个通用的框架，可以与不同的分割模型一起使用，并在不同场景下提升性能。<a href="https://github.com/importZL/GenSeg">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🚀🤔<strong>奥特曼预言：GPT-8与AGI算力之争</strong>：OpenAI CEO 奥特曼预测：到2035年，<strong>GPT-8可能治愈癌症</strong>；到2050年，<strong>对AGI算力的争夺可能引发第三次世界大战</strong>。这提醒我们，要警惕技术进步带来的潜在风险，合理分配和利用AI算力资源至关重要。</p>
+</li>
+<li>
+<p>🎉🎈<strong>新智元十周年：见证ASI降临</strong>：新智元迎来了十周年纪念，诚邀你加入，共同见证**ASI (Artificial Superintelligence，人工超级智能)**时代的到来。</p>
+</li>
+<li>
+<p>🎉🔬<strong>清华团队突破Dijkstra算法瓶颈</strong>：清华大学段然团队的新算法速度超越了所有基于<strong>Dijkstra算法</strong>及其改进版本，甚至打破了图灵奖得主Tarjan团队去年证明的<strong>普遍最优性</strong>，彻底解决了困扰学界40多年的"排序障碍”。这项突破将极大提升地图导航、网络路由等应用的效率。<a href="https://www.tsinghua.edu.cn/info/1175/118821.htm">🔗 清华大学新闻</a><a href="https://www.quantamagazine.org/new-method-is-the-fastest-way-to-find-the-best-routes-20250806/">🔗 Quanta Magazine报道</a></p>
+</li>
+<li>
+<p>🚀🌟<strong>三个引人注目的开源项目</strong>：<code>nautilus_trader</code> <a href="https://github.com/nautechsystems/nautilus_trader">🔗 项目仓库</a>是一个<strong>高性能算法交易平台和事件驱动回测系统</strong>；<code>gpt4all</code> <a href="https://github.com/nomic-ai/gpt4all">🔗 项目仓库</a>实现了<strong>在任何设备上运行本地大型语言模型</strong>；<code>polar</code> <a href="https://github.com/polarsource/polar">🔗 项目仓库</a>是一个<strong>开源的数字产品引擎</strong>。</p>
+</li>
+<li>
+<p>🚀📱💻🖥️⌚️<strong>exo项目：在家组建你的AI集群</strong>：exo项目允许你用家里的手机、电脑、平板甚至手表，搭建一个属于你自己的<strong>AI集群</strong>。<a href="https://github.com/exo-explore/exo">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🎮<strong>SDL项目：游戏开发的幕后英雄</strong>：SDL项目（简易直接媒体层）负责处理音频、视频、输入等，让开发者可以更专注于游戏本身的设计。<a href="https://github.com/libsdl-org/SDL">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🤔<strong>pandas-ai项目：用对话方式玩转数据</strong>：pandas-ai项目结合了<strong>大型语言模型</strong>和<strong>RAG技术</strong>，让你可以用自然语言与你的数据库或数据湖进行对话，分析数据。<a href="https://github.com/sinaptik-ai/pandas-ai">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🤔😂<strong>GPT-5发布遇冷，奥特曼紧急回应</strong>：OpenAI的GPT-5发布会出现了低级错误，例如图表数据与图像不符，引发了网友的强烈吐槽。OpenAI CEO Sam Altman解释了图表错误，说是团队成员加班太累导致的人为失误。很多用户反馈GPT-5的表现不如GPT-4。</p>
+</li>
+<li>
+<p>🤖<strong>ARPO：让AI智能体在关键时刻多探索一步</strong>：ARPO利用<strong>熵</strong>来判断AI智能体决策的不确定性，并在不确定性高的时候进行更多探索，提高决策的质量和效率。<a href="https://github.com/dongguanting/ARPO">🔗 项目仓库</a></p>
+</li>
+<li>
+<p>🛡️<strong>新型后门攻击威胁Scaffold联邦学习</strong>：研究人员发现了一种新型的后门攻击，它可以针对Scaffold联邦学习系统，并能将良性的客户端转化为攻击的帮凶。</p>
+</li>
+<li>
+<p>🤔<strong>AI辅助编程：工具与鼓吹</strong>：博主@wwwgoubuli反对盲目<strong>鼓吹</strong>AI编程，认为应该理性看待AI辅助编程工具。</p>
+</li>
+<li>
+<p>🤯<strong>LLM：语言的图像，而非世界的映像</strong>：博主@wwwgoubuli指出，LLM构建了一个庞大的"语言相关性图像”，它能很好地捕捉语言的语法和统计结构，但这"图像”只反映了语言本身，而非语言所指涉的真实世界。</p>
+</li>
+<li>
+<p>🖼️<strong>盖茨的预言成真？</strong>：[图片: [D] Reminder that Bill Gates's prophesy came true https://preview.redd.it/ocefuljse3if1.png?width=640&amp;crop=smart&amp;auto=webp&amp;s=ad37ad44cb84d8db08a42863796e754b7a3d3ece]</p>
+</li>
+<li>
+<p>🤔😂<strong>房产预测与现实脱节:</strong> 大帅老猿吐槽抖音网红"夏小刀”对<strong>楼市暴涨</strong>的预测。[图片: https://pbs.twimg.com/media/Gx8sYOIbYAEtR4Z?format=png&amp;name=orig][图片: https://pbs.twimg.com/media/Gx8s8aVbkAAsB-D?format=png&amp;name=orig][图片: https://pbs.twimg.com/media/Gx8tAMQa8AAjcLa?format=png&amp;name=orig][图片: https://pbs.twimg.com/media/Gx8tFQ8bEAASqUE?format=png&amp;name=orig]</p>
+</li>
+<li>
+<p>📱 <strong>"大哥大”的诞生:</strong> 向阳乔木分享了摩托罗拉工程师马丁·库珀演示<strong>世界首部蜂窝移动电话DynaTAC</strong> 的历史照片。[图片: https://pbs.twimg.com/media/Gx8pX9Ob0AARI-W?format=jpg&amp;name=orig]</p>
+</li>
+<li>
+<p>🤖 <strong>AGI 时代的临近:</strong> Reddit 上的一篇文章讨论了<strong>通用人工智能 (AGI)</strong> 和超级智能的快速发展。[图片: ‘It’s missing something’: AGI, superintelligence and a race for the future https://external-preview.redd.it/l_oEyBCVBO72AeSAFzHK1ExiocNLekaYhyTmXRTyhsg.jpeg?width=640&amp;crop=smart&amp;auto=webp&amp;s=206325307388de2e83c723f45ca821fc5ac40c12]</p>
+</li>
+<li>
+<p>🤔🤖 斯坦福和卡内基梅隆大学的研究表明：过度依赖AI机器人进行情感交流，可能会导致用户满意度降低，孤独感和低幸福感增加。<img src="https://pbs.twimg.com/media/Gx7OXNOWYAAd_FK?format=jpg&amp;name=orig" alt="AI陪伴研究" /></p>
+</li>
+</ol>
+
+                    </main>
+
+                    <nav class="nav-wrapper" aria-label="Page navigation">
+                        <!-- Mobile navigation buttons -->
+                            <a rel="prev" href="../daily/2025-08-11.html" class="mobile-nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                                <i class="fa fa-angle-left"></i>
+                            </a>
+
+                            <a rel="next prefetch" href="../daily/2025-08-08.html" class="mobile-nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                                <i class="fa fa-angle-right"></i>
+                            </a>
+
+                        <div style="clear: both"></div>
+                    </nav>
+                </div>
+            </div>
+
+            <nav class="nav-wide-wrapper" aria-label="Page navigation">
+                    <a rel="prev" href="../daily/2025-08-11.html" class="nav-chapters previous" title="Previous chapter" aria-label="Previous chapter" aria-keyshortcuts="Left">
+                        <i class="fa fa-angle-left"></i>
+                    </a>
+
+                    <a rel="next prefetch" href="../daily/2025-08-08.html" class="nav-chapters next" title="Next chapter" aria-label="Next chapter" aria-keyshortcuts="Right">
+                        <i class="fa fa-angle-right"></i>
+                    </a>
+            </nav>
+
+        </div>
+
+
+
+
+        <script>
+            window.playground_copyable = true;
+        </script>
+
+
+        <script src="../elasticlunr.min.js"></script>
+        <script src="../mark.min.js"></script>
+        <script src="../searcher.js"></script>
+
+        <script src="../clipboard.min.js"></script>
+        <script src="../highlight.js"></script>
+        <script src="../book.js"></script>
+
+        <!-- Custom JS scripts -->
+
+
+    </div>
+    </body>
+</html>
